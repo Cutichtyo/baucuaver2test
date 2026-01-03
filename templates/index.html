@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bầu Cua Tết 2026</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+  🎲 BẦU CUA TẾT 2026 🎲
+</header>
+
+<section class="card">
+  <div class="music">
+    🎵 Nhạc Tết
+    <input type="checkbox" checked onchange="toggleMusic(this.checked)">
+    <input type="range" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)">
+  </div>
+</section>
+
+<section class="card center">
+  <input id="name" placeholder="Nhập tên người chơi">
+  <button class="btn start-btn" onclick="setUser()">BẮT ĐẦU</button>
+</section>
+
+<section class="card status">
+  <div>💰 <span id="money">0</span>$</div>
+  <div>🎮 <span id="turns">0</span></div>
+  <div>🧧 <span id="lixiLeft">0</span></div>
+</section>
+
+<section class="card">
+  <h3>📜 Tính cách</h3>
+  <ul>
+    {% for k,v in animals.items() %}
+      <li>{{ v.icon }} {{ v.desc }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="card bets">
+  {% for k,v in animals.items() %}
+    <div class="bet">
+      <div class="emoji">{{ v.icon }}</div>
+      <input type="number" class="bet-input" data-animal="{{ k }}" value="0" step="100" min="0">
+    </div>
+  {% endfor %}
+</section>
+
+<div class="center">
+  <button class="btn btn-lac" onclick="play()">🎲 LẮC</button>
+</div>
+
+<div id="dice">
+  <div class="dice">❓</div>
+  <div class="dice">❓</div>
+  <div class="dice">❓</div>
+</div>
+
+<div class="center">
+  <button class="btn btn-lixi" onclick="lixi()">🧧 Xin Lì Xì</button>
+</div>
+
+<section class="card">
+  <h3>🏆 Leaderboard</h3>
+  <ul id="leaderboard">
+    {% for p in leaderboard %}
+      <li class="{% if loop.index==1 %}top1{% endif %}">
+        {{ p.name }} — {{ p.money }}$
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- LÌ XÌ -->
+<div id="lixi-overlay" class="lixi-overlay hidden" onclick="openLixi()">
+  <div class="lixi-envelope">🧧</div>
+  <div class="lixi-text">Tap để mở lì xì</div>
+</div>
+
+<script src="/static/js/game.js"></script>
+</body>
+</html>

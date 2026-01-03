@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(#fff6a5, #fffbe0);
+}
+
+/* HEADER */
+.header {
+  background: #ffdd66;
+  text-align: center;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  margin: 14px;
+  padding: 16px;
+  border-radius: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.center {
+  text-align: center;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* MUSIC */
+.music {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BET GRID */
+.bets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.bet {
+  background: #f6ffd1;
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 34px;
+}
+
+/* =========================
+   DICE (QUAN TRỌNG)
+========================= */
+#dice {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 16px;
+}
+
+/* MẶC ĐỊNH: TRẮNG */
+.dice {
+  width: 72px;
+  height: 72px;
+  background: #ffffff;          /* ⬅️ TRẮNG TRƯỚC KHI QUAY */
+  border-radius: 18px;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* SAU KHI QUAY XONG */
+.dice.done {
+  background: #111111;          /* ⬅️ ĐEN KHI DỪNG */
+  color: #ffffff;
+}
+
+/* BUTTON */
+.btn {
+  min-width: 180px;
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.2);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.btn-lac {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+}
+
+.btn-lixi {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+/* LEADERBOARD */
+#leaderboard {
+  padding: 0;
+}
+
+#leaderboard li {
+  list-style: none;
+  padding: 10px 14px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.top1 {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* LÌ XÌ */
+.lixi-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.lixi-envelope {
+  font-size: 100px;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(6deg); }
+  50% { transform: rotate(-6deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(0); }
+}
+
+.lixi-text {
+  color: white;
+  margin-top: 12px;
+}
+
+/* TOOLTIP */
+.reward-tip {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  pointer-events: none;
+  animation: rewardFade 2s ease forwards;
+  z-index: 1000;
+}
+
+.reward-win { color: #00ff90; }
+.reward-lose { color: #ff8080; }
+.reward-bonus { color: #ffd700; }
+
+@keyframes rewardFade {
+  0%   { opacity: 0; transform: translateY(10px); }
+  15%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}

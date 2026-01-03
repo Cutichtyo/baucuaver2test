@@ -1,0 +1,121 @@
+TỔNG HỢP ĐẦY ĐỦ YÊU CẦU (CHECKLIST)
+🎮 Trạng thái & luồng chơi
+
+Nhập tên người chơi → bấm BẮT ĐẦU
+
+Trước khi bắt đầu:
+
+Nút LẮC / XIN LÌ XÌ bị disable
+
+Sau khi bắt đầu:
+
+Nút được enable
+
+Nhạc Tết bắt đầu chạy
+
+Không reload trang
+
+Không khóa nút vĩnh viễn
+
+Có state READY / SPINNING
+
+💰 Tiền & lượt
+
+Mỗi người bắt đầu với 1000$
+
+10 lượt chơi
+
+Cược bội số 100$
+
+Không được đặt toàn 0
+
+Trừ tiền trước, cộng tiền sau
+
+Có ví tiền
+
+🐾 Logic 6 con (chuẩn casino – đã rà lại)
+
+🦀 Cua: x1
+
+🍐 Bầu: trúng → + lượt (chỉ khi cược)
+
+🐎 Ngựa (Nai đổi thành Ngựa): rất hiếm, x5
+
+🐟 Cá: trúng → + lượt lì xì (chỉ khi cược)
+
+🦐 Tôm:
+
+2 ô → x6
+
+3 ô → x8
+
+🐓 Gà:
+
+Chỉ khi có cược gà
+
+Nhân đôi tiền 2 ô còn lại
+
+🎲 Animation
+
+❓ trước khi quay
+
+Quay icon random (không phải ❓)
+
+Quay từng ô
+
+Chậm dần (ease-out)
+
+Khi dừng → ô chuyển nền đen
+
+Có rung khi dừng xong
+
+🧧 Lì xì
+
+Xin lì xì (random 10–100$)
+
+Tối đa 4 lần/người
+
+Chỉ được xin khi có lượt lì xì
+
+Có tooltip thông báo tiền nhận
+
+🏆 Leaderboard
+
+Hiển thị Player + tiền
+
+Top 1 chữ đỏ
+
+Update realtime sau mỗi lượt
+
+🎵 Âm thanh
+
+1 file nhạc Tết
+
+Chỉ chạy sau khi bấm BẮT ĐẦU
+
+Không bị stop khi quay
+
+Có thể mở rộng slider sau (để sẵn hook)
+
+⚙️ Config
+
+Tất cả chỉnh trong config.json
+
+tiền
+
+lượt
+
+tốc độ quay
+
+thời gian dừng từng ô
+
+weight
+
+multiplier
+
+
+
+
+1️⃣ Gửi game.js FINAL (ease-out, quay từng ô)
+2️⃣ Fix nút không click được (JS side)
+3️⃣ Thêm confetti + xé lì xì

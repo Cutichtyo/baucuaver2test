@@ -1,0 +1,57 @@
+{
+  "game": {
+    "start_money": 1000,
+    "max_turns": 10,
+    "bet_unit": 100,
+    "lixi_min": 100,
+    "lixi_max": 1000,
+    "big_win_threshold": 1000
+  },
+
+  "animation": {
+    "dice_spin_speed": 100,
+    "spin_time": 3000,
+    "dice_stop_delay": 100,
+    "vibrate_ms": 300
+  },
+
+  "animals": {
+    "cua": {
+      "icon": "🦀",
+      "weight": 3,
+      "multiplier": 1,
+      "desc": "Ra nhiều, ăn x1"
+    },
+    "bau": {
+      "icon": "🍐",
+      "weight": 1,
+      "extra_turn": 1,
+      "desc": "Mỗi ô trúng +1 lượt"
+    },
+    "ngua": {
+      "icon": "🐎",
+      "weight": 0.25,
+      "multiplier": 5,
+      "desc": "Rất hiếm, ăn x5"
+    },
+    "ca": {
+      "icon": "🐟",
+      "weight": 1,
+      "extra_lixi": 1,
+      "desc": "Trúng +1 lượt lì xì"
+    },
+    "tom": {
+      "icon": "🦐",
+      "weight": 1,
+      "double_multiplier": 6,
+      "triple_multiplier": 8,
+      "desc": "2 ô x6, 3 ô x8"
+    },
+    "ga": {
+      "icon": "🐓",
+      "weight": 1,
+      "boost_others": 2,
+      "desc": "Nhân đôi thưởng 2 ô còn lại"
+    }
+  }
+}
