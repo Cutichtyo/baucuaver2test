@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bầu Cua Tết 2026</title>
 
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
@@ -83,6 +83,7 @@
   <div class="lixi-text">Tap để mở lì xì</div>
 </div>
 
-<script src="/static/js/game.js"></script>
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
 </body>
 </html>
+
